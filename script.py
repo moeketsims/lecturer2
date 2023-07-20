@@ -2,6 +2,8 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 df_raw = pd.read_csv("data.csv", sep=";")
 
@@ -44,3 +46,12 @@ print("R2 Score:", r2_score)
 # Writing the result to a file
 with open('results.txt', 'w') as f:
     f.write(f"R2 Score: {r2_score}\n")
+
+# Plot actual vs predicted
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x=y_test, y=y_pred)
+plt.xlabel('Actual')
+plt.ylabel('Predicted')
+plt.title('Actual vs. Predicted')
+plt.savefig('actual_vs_predicted.png')  # Save the figure
+plt.show()
