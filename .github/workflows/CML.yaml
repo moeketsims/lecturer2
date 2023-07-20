@@ -20,6 +20,5 @@ jobs:
           # Post reports as comments in GitHub PRs
           echo "## Model Performance" > report.md
           cat results.txt >> report.md
-          echo "## Data viz" >> report.md
-          echo "![actual](./actual_vs_predicted.png)" >> report.md
+          echo "![](./actual_vs_predicted.png)" >> report.md
           cml comment create report.md
