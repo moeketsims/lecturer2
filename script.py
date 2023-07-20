@@ -54,4 +54,3 @@ plt.xlabel('Actual')
 plt.ylabel('Predicted')
 plt.title('Actual vs. Predicted')
 plt.savefig('actual_vs_predicted.png')  # Save the figure
-plt.show()
