@@ -1,4 +1,4 @@
-name: model-wine-quality
+name: lecture-2
 on: [push]
 jobs:
   run:
