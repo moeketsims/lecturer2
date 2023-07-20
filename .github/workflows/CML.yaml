@@ -1,4 +1,4 @@
-name: lecture-2
+name: Lecture-2-code
 on: [push]
 jobs:
   run:
