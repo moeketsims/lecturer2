@@ -18,6 +18,7 @@ jobs:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Post reports as comments in GitHub PRs
+          echo '## Performance' > report.md
           cat results.txt >> report.md
           echo '![](./actual_vs_predicted.png "Confusion Matrix")' >> report.md
           cml comment create report.md
